@@ -2,6 +2,7 @@ package com.example.firebaseintent;
 
 import android.support.annotation.NonNull;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,7 +33,7 @@ public class FirebaseDatabaseHelper {
 
         public FirebaseDatabaseHelper() {
             mDataBase = FirebaseDatabase.getInstance();
-            mReferenceNotes= mDataBase.getReference("notas/Materia");
+            mReferenceNotes= mDataBase.getReference("notas");
         }
 
         public void readNotes(final DataStatus dataStatus) {
@@ -56,6 +57,33 @@ public class FirebaseDatabaseHelper {
 
                 }
             });
+
+        }
+
+        public void addNote(Notes note, final DataStatus datastatus){
+
+       String key =  mReferenceNotes.push().getKey();
+        mReferenceNotes.child(key).setValue(note).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                datastatus.DataIsInserted();
+            }
+        });
+
+    }
+
+        public void updateNote(String key , Notes note , final DataStatus dataStatus){
+
+            mReferenceNotes.child(key).setValue(note).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    dataStatus.DataIsUpdated();
+                }
+            });
+
+        }
+
+        public void deleteNote(){
 
         }
     }

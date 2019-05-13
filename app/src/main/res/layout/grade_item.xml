@@ -18,7 +18,7 @@
             android:layout_alignParentTop="true"
             android:paddingStart="12dp"
             android:textColor="#FFFF"
-            android:textSize="19dp" />
+            android:textSize="10dp" />
 
         <TextView
             android:id="@+id/docente"

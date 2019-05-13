@@ -1,14 +1,14 @@
 package com.example.firebaseintent;
 
 public class Notes {
-    private int primero;
-    private int segundo;
-    private int tercero;
-    private int resultado;
+    private String primero;
+    private String segundo;
+    private String tercero;
+    private String resultado;
     private String  n_materia;
 
 
-    public Notes(int primero, int segundo, int tercero, int resultado, String n_materia) {
+    public Notes(String primero, String segundo, String tercero, String resultado, String n_materia) {
         this.primero = primero;
         this.segundo = segundo;
         this.tercero = tercero;
@@ -20,35 +20,35 @@ public class Notes {
     }
 
 
-    public int getPrimero() {
+    public String getPrimero() {
         return primero;
     }
 
-    public void setPrimero(int primero) {
+    public void setPrimero(String primero) {
         this.primero = primero;
     }
 
-    public int getSegundo() {
+    public String getSegundo() {
         return segundo;
     }
 
-    public void setSegundo(int segundo) {
+    public void setSegundo(String segundo) {
         this.segundo = segundo;
     }
 
-    public int getTercero() {
+    public String getTercero() {
         return tercero;
     }
 
-    public void setTercero(int tercero) {
+    public void setTercero(String tercero) {
         this.tercero = tercero;
     }
 
-    public int getResultado() {
+    public String getResultado() {
         return resultado;
     }
 
-    public void setResultado(int resultado) {
+    public void setResultado(String resultado) {
         this.resultado = resultado;
     }
 

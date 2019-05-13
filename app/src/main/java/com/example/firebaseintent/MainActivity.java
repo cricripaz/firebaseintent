@@ -1,8 +1,12 @@
 package com.example.firebaseintent;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Switch;
 
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -40,5 +44,21 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.notelist_activity_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.newMateria:
+                startActivity(new Intent(this ,NewNoteActivity.class));
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
