@@ -1,10 +1,12 @@
 package com.example.firebaseintent;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -41,6 +43,21 @@ public class RecyclerView_Config {
             mnota3 = (TextView) itemView.findViewById(R.id.nota3);
             mnotafinal = (TextView) itemView.findViewById(R.id.notaFinal);
             mmateria = (TextView) itemView.findViewById(R.id.materia);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(mContext , NoteDetailsActivity.class);
+                    intent.putExtra("key",key);
+                    intent.putExtra("materia",mmateria.getText().toString());
+                    intent.putExtra("primero",mnota1.getText().toString());
+                    intent.putExtra("segundo",mnota2.getText().toString());
+                    intent.putExtra("tercero",mnota3.getText().toString());
+
+                    mContext.startActivity(intent);
+
+                }
+            });
 
         }
 

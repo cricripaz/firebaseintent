@@ -83,8 +83,13 @@ public class FirebaseDatabaseHelper {
 
         }
 
-        public void deleteNote(){
-
+        public void deleteNote(String key , final DataStatus dataStatus){
+            mReferenceNotes.child(key).setValue(null).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    dataStatus.DataIsDeleted();
+                }
+            });
         }
     }
 
