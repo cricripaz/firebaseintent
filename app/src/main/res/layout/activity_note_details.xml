@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
     android:gravity="center"
     tools:context=".NewNoteActivity">
 
@@ -25,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="Primero"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -37,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="Segundo"
         tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="216dp" />
@@ -47,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="Tercer "
         tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="283dp" />
@@ -75,7 +76,7 @@
         android:id="@+id/back_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="back"
+        android:text="Back"
         tools:layout_editor_absoluteX="162dp"
         tools:layout_editor_absoluteY="448dp" />
 </LinearLayout>

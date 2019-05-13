@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
     android:gravity="center"
     tools:context=".NewNoteActivity">
 
@@ -14,7 +15,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Materia"
+        android:hint="Materia"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,8 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Primero"
+        android:inputType="number"
+        android:hint="Primera nota"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,8 +38,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Segundo"
+        android:inputType="number"
+        android:hint="Segunda nota"
         tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="216dp" />
 
@@ -47,8 +48,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Tercer "
+        android:inputType="number"
+        android:hint="Tercera nota"
         tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="283dp" />
 

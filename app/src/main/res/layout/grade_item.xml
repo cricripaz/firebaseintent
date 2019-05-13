@@ -8,7 +8,7 @@
         android:layout_height="70dp"
         android:layout_marginHorizontal="35dp"
         android:layout_marginVertical="40dp"
-        android:background="#1A237E">
+        android:background="@drawable/table">
 
         <TextView
             android:id="@+id/materia"
@@ -18,7 +18,9 @@
             android:layout_alignParentTop="true"
             android:paddingStart="12dp"
             android:textColor="#FFFF"
-            android:textSize="10dp" />
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/docente"
@@ -27,7 +29,7 @@
             android:layout_below="@+id/materia"
             android:paddingStart="13dp"
             android:textColor="#FFFF"
-            android:textSize="17dp" />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/horario"
@@ -36,7 +38,7 @@
             android:layout_below="@+id/docente"
             android:paddingStart="14dp"
             android:textColor="#FFFF"
-            android:textSize="15dp" />
+            android:textSize="20sp"/>
 
         <TableLayout
             android:layout_width="224dp"

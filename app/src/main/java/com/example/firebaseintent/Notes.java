@@ -45,7 +45,21 @@ public class Notes {
     }
 
     public String getResultado() {
-        return resultado;
+        int res1 = Character.getNumericValue(primero.toCharArray()[0])*10 + Character.getNumericValue(primero.toCharArray()[1]);
+        int res2 = Character.getNumericValue(segundo.toCharArray()[0])*10 + Character.getNumericValue(segundo.toCharArray()[1]);
+        int res3 = Character.getNumericValue(tercero.toCharArray()[0])*10 + Character.getNumericValue(tercero.toCharArray()[1]);
+        if(primero.equals("100")) {
+            res1 = 100;
+        }
+        if (segundo.equals("100")) {
+            res2 = 100;
+        }
+        if (tercero.equals("100")) {
+            res3 = 100;
+        }
+        int resFin = (int) (res1*0.3 + res2*0.3 + res3*0.4);
+        String resFinStr = Integer.toString(resFin);
+        return resFinStr;
     }
 
     public void setResultado(String resultado) {
